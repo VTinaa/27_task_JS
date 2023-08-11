@@ -1,26 +1,107 @@
-h1{
+h1 {
     text-align: center;
 }
-h1 img{
+
+h1 img {
     width: 50%;
-    filter: drop-shadow(1px 1px 5px rgb(32, 108, 207));
+    /* filter: drop-shadow(1px 1px 5px rgb(32, 108, 207)); */
+    filter: drop-shadow(0 0 2px rgba(234, 57, 184, .9)) drop-shadow(0 0 4px rgba(234, 57, 184, .4)) drop-shadow(0 0 1rem rgba(234, 57, 184, .3)) drop-shadow(0 0 4rem rgba(234, 57, 184, .1));
+    --bs-border-opacity: 1;
+    border-color: rgba(var(--bs-secondary-rgb),var(--bs-border-opacity))!important;
 }
-.content{
+
+.content {
     margin: 15px 30px;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 10px;
 }
-.card{
+
+.contant .card {
     text-align: center;
 }
-.card-header{
+
+.content .card:hover {
+    cursor: pointer;
+    /* box-shadow: 1px 1px 5px #ea39b8e6; */
+    /* box-shadow: 0px 0px 10px #ea39b8e6; */
+    transform: scale(1.05);
+    position: relative;
+    z-index: 2;
+    transition: transform 0.5s;
+    /* box-shadow: 0px 0px 10px #ea39b8e6; */
+    box-shadow: 0 0 2px rgba(234, 57, 184, .9), 0 0 4px rgba(234, 57, 184, .4), 0 0 1rem rgba(234, 57, 184, .3), 0 0 4rem rgba(234, 57, 184, .1);
+    --bs-border-opacity: 1;
+    border-color: rgba(var(--bs-secondary-rgb),var(--bs-border-opacity))!important;
+}
+
+.card-header {
     font-size: 1.5em;
     word-wrap: normal;
 }
 
 /* pagination */
-.pagination {
-    justify-content: right;
-    margin-right: 30px;
+.number_page {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px 30px;
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+/*  */
+
+.details {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 3;
+    display: none;
+}
+
+.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details .card-title {
+    margin-top: 50px;
+}
+
+.border-info {
+    background-color: rgba(0, 0, 0, .9);
+    display: flex;
+    flex-direction: row;
+}
+
+.border-info img {
+    width: 300px;
+}
+
+.details i {
+    content: '\2718';
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+ul.card-text li {
+    list-style-type: none;
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    line-height: 40px;
+}
+
+ul.card-text li span:first-child {
+    color: #229df4;
 }
