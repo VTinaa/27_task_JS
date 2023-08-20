@@ -105,3 +105,12 @@ ul.card-text li {
 ul.card-text li span:first-child {
     color: #229df4;
 }
+
+/* tabs */
+
+ul li a.nav-link:hover{
+    color: rgba(234, 57, 184, .9);
+    filter: drop-shadow(0 0 2px rgba(234, 57, 184, .9)) drop-shadow(0 0 4px rgba(234, 57, 184, .4)) drop-shadow(0 0 1rem rgba(234, 57, 184, .3)) drop-shadow(0 0 4rem rgba(234, 57, 184, .1));
+    --bs-border-opacity: 1;
+    border-color: rgba(var(--bs-secondary-rgb),var(--bs-border-opacity))!important;
+}
